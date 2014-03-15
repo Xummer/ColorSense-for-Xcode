@@ -31,6 +31,15 @@ This is tested on OS X 10.8 with Xcode 4.4.1 and 4.5.
 
 * Only RGB (`colorWithRed:green:blue:alpha:`), grayscale (`colorWithWhite:alpha:`), and named colors (`redColor`...) are supported at the moment (no HSB or CMYK).
 
+## Addition
+####2014.03.15 add by Xummer
+1. adapt to Xcode 5.1 - [SO:The plugin didn't work on xcode 5.1](http://stackoverflow.com/questions/22324303/the-plugin-didnt-work-on-xcode-5-1)
+2. change rgba format from `%.3f` to `%d/255.0f` 
+3. change colorspase from `NSCalibratedRGBColorSpace`(genericRGBColorSpace) to `NSDeviceRGBColorSpace`(deviceRGBColorSpace) , [see this issue](https://github.com/Xummer/ColorDifferenceDemo) and [Apple Document about ColorSpace](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/DrawColor/Concepts/AboutColorSpaces.html#//apple_ref/doc/uid/20000758-BBCHACHA)
+
+This is tested on OS X 10.9.2 with Xcode5.1
+
+
 ## License
 
     Copyright (c) 2012, Ole Zorn
